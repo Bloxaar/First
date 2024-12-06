@@ -13959,7 +13959,7 @@ function dragify(Frame)
 end
 dragify(Main)
 
-
+task.spawn(function()
 if game:GetService("TextChatService").ChatVersion==Enum.ChatVersion.TextChatService then
 	print("This chat isnt supported therefore I will not run.")
 	return
@@ -14178,4 +14178,5 @@ game:GetService("RunService").Stepped:Connect(function()
 	end
 end)
 
+end)
 end)
