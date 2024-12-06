@@ -14068,6 +14068,9 @@ dragify(Main)
 								end
 								if GG.Text~="" then
 									if GG.Text:sub(0,3) == "/c " or GG.Text:sub(0,3) == "/e " then
+										if not ChattedEnabled then
+											ChatRemote:Fire(GG.Text)
+										end
 									else
 										game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(GG.Text,"All")
 									end
@@ -14119,6 +14122,9 @@ dragify(Main)
 					end
 					if GG.Text~="" then
 						if GG.Text:sub(0,3) == "/c " or GG.Text:sub(0,3) == "/e " then
+							if not ChattedEnabled then
+								ChatRemote:Fire(GG.Text)
+							end
 						else
 							game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(GG.Text,"All")
 						end
