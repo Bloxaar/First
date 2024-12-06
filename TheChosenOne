@@ -1,3 +1,4 @@
+
 local function newobj(class,parent)return Instance.new(class,parent)end
 local function svc(service)return game:GetService(service)end
 local assetid,textures = "rbxassetid://","rbxasset://textures/ui/Scroll/scroll-middle.png"
@@ -14066,7 +14067,7 @@ dragify(Main)
 									end
 								end
 								if GG.Text~="" then
-									if GG.Text:sub(0,3) == "/c " or if GG.Text:sub(0,3) == "/e " then
+									if GG.Text:sub(0,3) == "/c " or GG.Text:sub(0,3) == "/e " then
 									else
 										game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(GG.Text,"All")
 									end
@@ -14117,7 +14118,7 @@ dragify(Main)
 						end
 					end
 					if GG.Text~="" then
-						if GG.Text:sub(0,3) == "/c " or if GG.Text:sub(0,3) == "/e " then
+						if GG.Text:sub(0,3) == "/c " or GG.Text:sub(0,3) == "/e " then
 						else
 							game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(GG.Text,"All")
 						end
