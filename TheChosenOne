@@ -13925,11 +13925,11 @@ SelectedTab.BackgroundColor3=EnabledColour
 
 local UIS = game:GetService("UserInputService")
 local function dragify(Frame)
-	dragToggle = nil
-	dragInput = nil
-	dragStart = nil
-	dragPos = nil
-	function updateInput(input)
+	local dragToggle = nil
+	local dragInput = nil
+	local dragStart = nil
+	local dragPos = nil
+	local function updateInput(input)
 		Delta = input.Position - dragStart
 		Position = UDim2.new(startPos.X.Scale, startPos.X.Offset + Delta.X, startPos.Y.Scale, startPos.Y.Offset + Delta.Y)
 		game:GetService("TweenService"):Create(Frame, TweenInfo.new(0.05), {Position = Position}):Play()
