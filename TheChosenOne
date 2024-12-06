@@ -13924,7 +13924,7 @@ SelectedTab.BackgroundColor3=EnabledColour
 
 
 local UIS = game:GetService("UserInputService")
-function dragify(Frame)
+local function dragify(Frame)
 	dragToggle = nil
 	dragInput = nil
 	dragStart = nil
@@ -13960,224 +13960,224 @@ end
 dragify(Main)
 
 task.spawn(function()
-if game:GetService("TextChatService").ChatVersion==Enum.ChatVersion.TextChatService then
-	print("This chat isnt supported therefore I will not run.")
-	return
-end
-
-print("Hello gamer I am supported with your chatrace!")
-
-local ChatToggle = Instance.new("ScreenGui")
-local Main = Instance.new("Frame")
-local Toggle = Instance.new("TextButton")
-local TextLabel = Instance.new("TextLabel")
-
---Properties:
-
-ChatToggle.Name = "ChatToggle"
-s=pcall(function()
-	ChatToggle.Parent = game:GetService("CoreGui")
-end)
-if not s then
-	ChatToggle.Parent = game.Players.LocalPlayer.PlayerGui
-end
-ChatToggle.ResetOnSpawn=false
-ChatToggle.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
-
-Main.Name = "Main"
-Main.Parent = ChatToggle
-Main.BackgroundColor3 = Color3.fromRGB(147, 147, 147)
-Main.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Main.BorderSizePixel = 0
-Main.Position = UDim2.new(0.347280324, 0, 0.400000006, 0)
-Main.Size = UDim2.new(0.177126914, 7, 0.188405797, 7)
-
-TextLabel.Parent = Main
-TextLabel.BackgroundColor3 = Color3.fromRGB(221, 221, 221)
-TextLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
-TextLabel.BorderSizePixel = 0
-TextLabel.Size = UDim2.new(1, 0, 0.307692319, 0)
-TextLabel.Font = Enum.Font.SourceSans
-TextLabel.Text = "Toggle Chatted / fixer included"
-TextLabel.TextColor3 = Color3.fromRGB(0, 0, 0)
-TextLabel.TextScaled = true
-TextLabel.TextSize = 14.000
-TextLabel.TextWrapped = true
-
-Toggle.Name = "Toggle"
-Toggle.Parent = Main
-Toggle.BackgroundColor3 = Color3.fromRGB(189, 189, 189)
-Toggle.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Toggle.BorderSizePixel = 0
-Toggle.Position = UDim2.new(0.0649999976, 0, 0.400000006, 0)
-Toggle.Size = UDim2.new(0.874015749, 0, 0.523076952, 0)
-Toggle.Font = Enum.Font.SourceSans
-Toggle.Text = "YoucanDragMe!"
-Toggle.TextColor3 = Color3.fromRGB(0, 0, 0)
-Toggle.TextScaled = true
-Toggle.TextSize = 14.000
-Toggle.TextWrapped = true
-
-
-
-
-local UIS = game:GetService("UserInputService")
-function dragify(Frame)
-	dragToggle = nil
-	dragInput = nil
-	dragStart = nil
-	dragPos = nil
-	function updateInput(input)
-		Delta = input.Position - dragStart
-		Position = UDim2.new(startPos.X.Scale, startPos.X.Offset + Delta.X, startPos.Y.Scale, startPos.Y.Offset + Delta.Y)
-		game:GetService("TweenService"):Create(Frame, TweenInfo.new(0.02), {Position = Position}):Play()
+	if game:GetService("TextChatService").ChatVersion==Enum.ChatVersion.TextChatService then
+		print("This chat isnt supported therefore I will not run.")
+		return
 	end
-	Frame.InputBegan:Connect(function(input)
-		if (input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch) and UIS:GetFocusedTextBox() == nil then
-			dragToggle = true
-			dragStart = input.Position
-			startPos = Frame.Position
-			input.Changed:Connect(function()
-				if input.UserInputState == Enum.UserInputState.End then
-					dragToggle = false
-				end
-			end)
+	
+	print("Hello gamer I am supported with your chatrace!")
+	
+	local ChatToggle = Instance.new("ScreenGui")
+	local Main = Instance.new("Frame")
+	local Toggle = Instance.new("TextButton")
+	local TextLabel = Instance.new("TextLabel")
+	
+	--Properties:
+	
+	ChatToggle.Name = "ChatToggle"
+	s=pcall(function()
+		ChatToggle.Parent = game:GetService("CoreGui")
+	end)
+	if not s then
+		ChatToggle.Parent = game.Players.LocalPlayer.PlayerGui
+	end
+	ChatToggle.ResetOnSpawn=false
+	ChatToggle.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+	
+	Main.Name = "Main"
+	Main.Parent = ChatToggle
+	Main.BackgroundColor3 = Color3.fromRGB(147, 147, 147)
+	Main.BorderColor3 = Color3.fromRGB(0, 0, 0)
+	Main.BorderSizePixel = 0
+	Main.Position = UDim2.new(0.347280324, 0, 0.400000006, 0)
+	Main.Size = UDim2.new(0.177126914, 7, 0.188405797, 7)
+	
+	TextLabel.Parent = Main
+	TextLabel.BackgroundColor3 = Color3.fromRGB(221, 221, 221)
+	TextLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
+	TextLabel.BorderSizePixel = 0
+	TextLabel.Size = UDim2.new(1, 0, 0.307692319, 0)
+	TextLabel.Font = Enum.Font.SourceSans
+	TextLabel.Text = "Toggle Chatted / fixer included"
+	TextLabel.TextColor3 = Color3.fromRGB(0, 0, 0)
+	TextLabel.TextScaled = true
+	TextLabel.TextSize = 14.000
+	TextLabel.TextWrapped = true
+	
+	Toggle.Name = "Toggle"
+	Toggle.Parent = Main
+	Toggle.BackgroundColor3 = Color3.fromRGB(189, 189, 189)
+	Toggle.BorderColor3 = Color3.fromRGB(0, 0, 0)
+	Toggle.BorderSizePixel = 0
+	Toggle.Position = UDim2.new(0.0649999976, 0, 0.400000006, 0)
+	Toggle.Size = UDim2.new(0.874015749, 0, 0.523076952, 0)
+	Toggle.Font = Enum.Font.SourceSans
+	Toggle.Text = "YoucanDragMe!"
+	Toggle.TextColor3 = Color3.fromRGB(0, 0, 0)
+	Toggle.TextScaled = true
+	Toggle.TextSize = 14.000
+	Toggle.TextWrapped = true
+	
+	
+	
+	
+	local UIS = game:GetService("UserInputService")
+	local function dragify(Frame)
+		dragToggle = nil
+		dragInput = nil
+		dragStart = nil
+		dragPos = nil
+		function updateInput(input)
+			Delta = input.Position - dragStart
+			Position = UDim2.new(startPos.X.Scale, startPos.X.Offset + Delta.X, startPos.Y.Scale, startPos.Y.Offset + Delta.Y)
+			game:GetService("TweenService"):Create(Frame, TweenInfo.new(0.02), {Position = Position}):Play()
 		end
-	end)
-	Frame.InputChanged:Connect(function(input)
-		if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
-			dragInput = input
-		end
-	end)
-	game:GetService("UserInputService").InputChanged:Connect(function(input)
-		if input == dragInput and dragToggle then
-			updateInput(input)
-		end
-	end)
-end
-dragify(Main)
-
-local ChattedEnabled=false
-
-local ChatRemote=Instance.new("BindableEvent")
-
-local GG=nil
-local FFA=nil
-
-while true do
-	print("Waiting on chat connection.")
-	local s=pcall(function()
-		game:GetService("StarterGui"):SetCore("CoreGuiChatConnections", {ChatWindow = {MessagePosted = ChatRemote}})
-	end)
-	if s then break end
-	task.wait(0.2)
-end
-print("I got the chat connection!")
-
-if ChattedEnabled then
-	Toggle.Text=".Chatted [Enabled]"
-	Toggle.BackgroundColor3=Color3.new(0.43, 0.69, 0.47)
-
-else
-	Toggle.Text=".Chatted [Disabled]"
-	Toggle.BackgroundColor3=Color3.new(0.9, 0.56, 0.61)
-end
-
-UIS.InputBegan:Connect(function(input)
-	if input.KeyCode==Enum.KeyCode.Slash then
-		if UIS:GetFocusedTextBox()==nil then
-			pcall(function()
-				if FFA then
-					if GG.Parent==nil then
-						FFA:Disconnect()
-						GG=nil
+		Frame.InputBegan:Connect(function(input)
+			if (input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch) and UIS:GetFocusedTextBox() == nil then
+				dragToggle = true
+				dragStart = input.Position
+				startPos = Frame.Position
+				input.Changed:Connect(function()
+					if input.UserInputState == Enum.UserInputState.End then
+						dragToggle = false
 					end
-				end
-				GG=game:GetService("Players").LocalPlayer.PlayerGui.Chat.Frame.ChatBarParentFrame.Frame.BoxFrame.Frame.ChatBar
-				if FFA==nil then
-					FFA=GG.FocusLost:Connect(function(ent)
-						print(GG.Text)
-						if ent then
-							if ChattedEnabled then
-								if GG.Text~="" then
-									ChatRemote:Fire(GG.Text)
-								end
-							end
-							if GG.Text~="" then
-							game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(GG.Text,"All")
-							end
-							GG.Text=""
-						end
-					end)
-				end
-				GG:CaptureFocus()
-				task.wait()
-				if GG.Text=="/" then
-					GG.Text=""
-				end
-			end)
-		end
+				end)
+			end
+		end)
+		Frame.InputChanged:Connect(function(input)
+			if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
+				dragInput = input
+			end
+		end)
+		game:GetService("UserInputService").InputChanged:Connect(function(input)
+			if input == dragInput and dragToggle then
+				updateInput(input)
+			end
+		end)
 	end
-end)
-
-game:GetService("TextChatService")
-
-Toggle.MouseButton1Click:Connect(function()
-	ChattedEnabled=not ChattedEnabled
+	dragify(Main)
+	
+	local ChattedEnabled=false
+	
+	local ChatRemote=Instance.new("BindableEvent")
+	
+	local GG=nil
+	local FFA=nil
+	
+	while true do
+		print("Waiting on chat connection.")
+		local s=pcall(function()
+			game:GetService("StarterGui"):SetCore("CoreGuiChatConnections", {ChatWindow = {MessagePosted = ChatRemote}})
+		end)
+		if s then break end
+		task.wait(0.2)
+	end
+	print("I got the chat connection!")
+	
 	if ChattedEnabled then
 		Toggle.Text=".Chatted [Enabled]"
 		Toggle.BackgroundColor3=Color3.new(0.43, 0.69, 0.47)
-		
+	
 	else
 		Toggle.Text=".Chatted [Disabled]"
 		Toggle.BackgroundColor3=Color3.new(0.9, 0.56, 0.61)
 	end
-end)
-
-
-
-
-pcall(function()
-	if FFA then
-		if GG.Parent==nil then
-			FFA:Disconnect()
-			GG=nil
-		end
-	end
-	GG=game:GetService("Players").LocalPlayer.PlayerGui.Chat.Frame.ChatBarParentFrame.Frame.BoxFrame.Frame.ChatBar
-	if FFA==nil then
-		FFA=GG.FocusLost:Connect(function(ent)
-			if ent then
-				if ChattedEnabled then
-					if GG.Text~="" then
-					ChatRemote:Fire(GG.Text)
+	
+	UIS.InputBegan:Connect(function(input)
+		if input.KeyCode==Enum.KeyCode.Slash then
+			if UIS:GetFocusedTextBox()==nil then
+				pcall(function()
+					if FFA then
+						if GG.Parent==nil then
+							FFA:Disconnect()
+							GG=nil
+						end
 					end
-				end
-				if GG.Text~="" then
-				game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(GG.Text,"All")
-				end
-				GG.Text=""
+					GG=game:GetService("Players").LocalPlayer.PlayerGui.Chat.Frame.ChatBarParentFrame.Frame.BoxFrame.Frame.ChatBar
+					if FFA==nil then
+						FFA=GG.FocusLost:Connect(function(ent)
+							print(GG.Text)
+							if ent then
+								if ChattedEnabled then
+									if GG.Text~="" then
+										ChatRemote:Fire(GG.Text)
+									end
+								end
+								if GG.Text~="" then
+								game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(GG.Text,"All")
+								end
+								GG.Text=""
+							end
+						end)
+					end
+					GG:CaptureFocus()
+					task.wait()
+					if GG.Text=="/" then
+						GG.Text=""
+					end
+				end)
 			end
-		end)
-	end
-end)
-
-local SGUI=game:GetService("StarterGui")
-game:GetService("RunService").Stepped:Connect(function()
-	if SGUI:GetCore("ChatActive")==true then
-		pcall(function()
-			game:GetService("StarterGui"):SetCore("CoreGuiChatConnections", {ChatWindow = {MessagePosted = ChatRemote}})
-		end)
-		pcall(function()
-			game:GetService("Players").LocalPlayer.PlayerGui.Chat.Frame.Visible=true
-		end)
-	else
-		pcall(function()
-			game:GetService("Players").LocalPlayer.PlayerGui.Chat.Frame.Visible=false
-		end)
-	end
-end)
-
-end)
+		end
+	end)
+	
+	game:GetService("TextChatService")
+	
+	Toggle.MouseButton1Click:Connect(function()
+		ChattedEnabled=not ChattedEnabled
+		if ChattedEnabled then
+			Toggle.Text=".Chatted [Enabled]"
+			Toggle.BackgroundColor3=Color3.new(0.43, 0.69, 0.47)
+			
+		else
+			Toggle.Text=".Chatted [Disabled]"
+			Toggle.BackgroundColor3=Color3.new(0.9, 0.56, 0.61)
+		end
+	end)
+	
+	
+	
+	
+	pcall(function()
+		if FFA then
+			if GG.Parent==nil then
+				FFA:Disconnect()
+				GG=nil
+			end
+		end
+		GG=game:GetService("Players").LocalPlayer.PlayerGui.Chat.Frame.ChatBarParentFrame.Frame.BoxFrame.Frame.ChatBar
+		if FFA==nil then
+			FFA=GG.FocusLost:Connect(function(ent)
+				if ent then
+					if ChattedEnabled then
+						if GG.Text~="" then
+						ChatRemote:Fire(GG.Text)
+						end
+					end
+					if GG.Text~="" then
+					game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(GG.Text,"All")
+					end
+					GG.Text=""
+				end
+			end)
+		end
+	end)
+	
+	local SGUI=game:GetService("StarterGui")
+	game:GetService("RunService").Stepped:Connect(function()
+		if SGUI:GetCore("ChatActive")==true then
+			pcall(function()
+				game:GetService("StarterGui"):SetCore("CoreGuiChatConnections", {ChatWindow = {MessagePosted = ChatRemote}})
+			end)
+			pcall(function()
+				game:GetService("Players").LocalPlayer.PlayerGui.Chat.Frame.Visible=true
+			end)
+		else
+			pcall(function()
+				game:GetService("Players").LocalPlayer.PlayerGui.Chat.Frame.Visible=false
+			end)
+		end
+	end)
+	
+	end)
 end)
 print("am here")
