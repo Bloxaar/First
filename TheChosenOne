@@ -14066,7 +14066,10 @@ dragify(Main)
 									end
 								end
 								if GG.Text~="" then
-								game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(GG.Text,"All")
+									if GG.Text:sub(0,3) == "/c " or if GG.Text:sub(0,3) == "/e " then
+									else
+										game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(GG.Text,"All")
+									end
 								end
 								GG.Text=""
 							end
@@ -14081,9 +14084,7 @@ dragify(Main)
 			end
 		end
 	end)
-	
-	game:GetService("TextChatService")
-	
+
 	Toggle.MouseButton1Click:Connect(function()
 		ChattedEnabled=not ChattedEnabled
 		if ChattedEnabled then
@@ -14116,7 +14117,10 @@ dragify(Main)
 						end
 					end
 					if GG.Text~="" then
-					game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(GG.Text,"All")
+						if GG.Text:sub(0,3) == "/c " or if GG.Text:sub(0,3) == "/e " then
+						else
+							game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(GG.Text,"All")
+						end
 					end
 					GG.Text=""
 				end
