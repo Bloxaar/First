@@ -13984,15 +13984,15 @@ task.spawn(function()
 	ChatToggle.ResetOnSpawn=false
 	ChatToggle.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 	
-	Main.Name = "Main"
-	Main.Parent = ChatToggle
-	Main.BackgroundColor3 = Color3.fromRGB(147, 147, 147)
-	Main.BorderColor3 = Color3.fromRGB(0, 0, 0)
-	Main.BorderSizePixel = 0
-	Main.Position = UDim2.new(0.347280324, 0, 0.400000006, 0)
-	Main.Size = UDim2.new(0.177126914, 7, 0.188405797, 7)
+	Main1.Name = "Main"
+	Main1.Parent = ChatToggle
+	Main1.BackgroundColor3 = Color3.fromRGB(147, 147, 147)
+	Main1.BorderColor3 = Color3.fromRGB(0, 0, 0)
+	Main1.BorderSizePixel = 0
+	Main1.Position = UDim2.new(0.347280324, 0, 0.400000006, 0)
+	Main1.Size = UDim2.new(0.177126914, 7, 0.188405797, 7)
 	
-	TextLabel.Parent = Main
+	TextLabel.Parent = Main1
 	TextLabel.BackgroundColor3 = Color3.fromRGB(221, 221, 221)
 	TextLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
 	TextLabel.BorderSizePixel = 0
@@ -14005,7 +14005,7 @@ task.spawn(function()
 	TextLabel.TextWrapped = true
 	
 	Toggle.Name = "Toggle"
-	Toggle.Parent = Main
+	Toggle.Parent = Main1
 	Toggle.BackgroundColor3 = Color3.fromRGB(189, 189, 189)
 	Toggle.BorderColor3 = Color3.fromRGB(0, 0, 0)
 	Toggle.BorderSizePixel = 0
@@ -14055,7 +14055,7 @@ task.spawn(function()
 			end
 		end)
 	end
-	dragify(Main)
+	dragify(Main1)
 	
 	local ChattedEnabled=false
 	
