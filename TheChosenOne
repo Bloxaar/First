@@ -13617,553 +13617,554 @@ task.spawn(function()
 
 
 
-local FileName="ExTabs.txt"
+	local FileName="ExTabs.txt"
 
-local CanLoadstring=pcall(function()loadstring("print('I am here!')")()end)
-if not CanLoadstring then print("Loadstring isnt available cannot run.") return end
-local Ex = Instance.new("ScreenGui")
-local Main = Instance.new("Frame")
-local Tabs = Instance.new("Frame")
-local Tab1 = Instance.new("TextButton")
-local Tab2 = Instance.new("TextButton")
-local Tab3 = Instance.new("TextButton")
-local Tab4 = Instance.new("TextButton")
-local Tab5 = Instance.new("TextButton")
-local Tab6 = Instance.new("TextButton")
-local Tab7 = Instance.new("TextButton")
-local Tab8 = Instance.new("TextButton")
-local TextLabel = Instance.new("TextLabel")
-local Scroll = Instance.new("ScrollingFrame")
-local Codebox = Instance.new("TextBox")
-local Run = Instance.new("TextButton")
-local Clear = Instance.new("TextButton")
-local LoadFromFile = Instance.new("TextButton")
-local SaveToFile = Instance.new("TextButton")
+	local CanLoadstring=pcall(function()loadstring("print('I am here!')")()end)
+	if not CanLoadstring then print("Loadstring isnt available cannot run.") return end
+	local Ex = Instance.new("ScreenGui")
+	local Main = Instance.new("Frame")
+	local Tabs = Instance.new("Frame")
+	local Tab1 = Instance.new("TextButton")
+	local Tab2 = Instance.new("TextButton")
+	local Tab3 = Instance.new("TextButton")
+	local Tab4 = Instance.new("TextButton")
+	local Tab5 = Instance.new("TextButton")
+	local Tab6 = Instance.new("TextButton")
+	local Tab7 = Instance.new("TextButton")
+	local Tab8 = Instance.new("TextButton")
+	local TextLabel = Instance.new("TextLabel")
+	local Scroll = Instance.new("ScrollingFrame")
+	local Codebox = Instance.new("TextBox")
+	local Run = Instance.new("TextButton")
+	local Clear = Instance.new("TextButton")
+	local LoadFromFile = Instance.new("TextButton")
+	local SaveToFile = Instance.new("TextButton")
 
---Properties:
+	--Properties:
 
-if game:GetService("CoreGui"):FindFirstChild("Ex") then
-	game:GetService("CoreGui"):FindFirstChild("Ex"):Destroy()
-end
-Ex.Name = "Ex"
-Ex.Parent = game:GetService("CoreGui")
-Ex.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
-
-Main.Name = "Main"
-Main.Parent = Ex
-Main.BackgroundColor3 = Color3.fromRGB(143, 143, 143)
-Main.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Main.BorderSizePixel = 0
-Main.Position = UDim2.new(0.318120807, 0, 0.228412256, 0)
-Main.Size = UDim2.new(0.351677865, 0, 0.501392782, 0)
-
-Tabs.Name = "Tabs"
-Tabs.Parent = Main
-Tabs.BackgroundColor3 = Color3.fromRGB(89, 89, 89)
-Tabs.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Tabs.BorderSizePixel = 0
-Tabs.Position = UDim2.new(0, 0, 0.0473118573, 0)
-Tabs.Size = UDim2.new(1, 0, 0.158590302, 0)
-
-Tab1.Name = "Tab1"
-Tab1.Parent = Tabs
-Tab1.BackgroundColor3 = Color3.fromRGB(152, 152, 152)
-Tab1.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Tab1.BorderSizePixel = 0
-Tab1.Position = UDim2.new(0.0285714287, 0, 0.138888896, 0)
-Tab1.Size = UDim2.new(0.215873018, 0, 0.388888896, 0)
-Tab1.Font = Enum.Font.Arial
-Tab1.TextColor3 = Color3.fromRGB(255, 255, 255)
-Tab1.TextSize = 14.000
-
-Tab2.Name = "Tab2"
-Tab2.Parent = Tabs
-Tab2.BackgroundColor3 = Color3.fromRGB(152, 152, 152)
-Tab2.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Tab2.BorderSizePixel = 0
-Tab2.Position = UDim2.new(0.271439999, 0, 0.138888896, 0)
-Tab2.Size = UDim2.new(0.215873018, 0, 0.388888896, 0)
-Tab2.Font = Enum.Font.Arial
-Tab2.TextColor3 = Color3.fromRGB(255, 255, 255)
-Tab2.TextSize = 14.000
-
-Tab3.Name = "Tab3"
-Tab3.Parent = Tabs
-Tab3.BackgroundColor3 = Color3.fromRGB(152, 152, 152)
-Tab3.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Tab3.BorderSizePixel = 0
-Tab3.Position = UDim2.new(0.514308751, 0, 0.138888896, 0)
-Tab3.Size = UDim2.new(0.215873018, 0, 0.388888896, 0)
-Tab3.Font = Enum.Font.Arial
-Tab3.TextColor3 = Color3.fromRGB(255, 255, 255)
-Tab3.TextSize = 14.000
-
-Tab4.Name = "Tab4"
-Tab4.Parent = Tabs
-Tab4.BackgroundColor3 = Color3.fromRGB(152, 152, 152)
-Tab4.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Tab4.BorderSizePixel = 0
-Tab4.Position = UDim2.new(0.753850281, 0, 0.138888896, 0)
-Tab4.Size = UDim2.new(0.215873018, 0, 0.388888896, 0)
-Tab4.Font = Enum.Font.Arial
-Tab4.TextColor3 = Color3.fromRGB(255, 255, 255)
-Tab4.TextSize = 14.000
-
-Tab5.Name = "Tab5"
-Tab5.Parent = Tabs
-Tab5.BackgroundColor3 = Color3.fromRGB(152, 152, 152)
-Tab5.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Tab5.BorderSizePixel = 0
-Tab5.Position = UDim2.new(0.0285714287, 0, 0.527777791, 0)
-Tab5.Size = UDim2.new(0.215873018, 0, 0.388888896, 0)
-Tab5.Font = Enum.Font.Arial
-Tab5.TextColor3 = Color3.fromRGB(255, 255, 255)
-Tab5.TextSize = 14.000
-
-Tab6.Name = "Tab6"
-Tab6.Parent = Tabs
-Tab6.BackgroundColor3 = Color3.fromRGB(152, 152, 152)
-Tab6.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Tab6.BorderSizePixel = 0
-Tab6.Position = UDim2.new(0.271439999, 0, 0.527777791, 0)
-Tab6.Size = UDim2.new(0.215873018, 0, 0.388888896, 0)
-Tab6.Font = Enum.Font.Arial
-Tab6.TextColor3 = Color3.fromRGB(255, 255, 255)
-Tab6.TextSize = 14.000
-
-Tab7.Name = "Tab7"
-Tab7.Parent = Tabs
-Tab7.BackgroundColor3 = Color3.fromRGB(152, 152, 152)
-Tab7.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Tab7.BorderSizePixel = 0
-Tab7.Position = UDim2.new(0.514308751, 0, 0.527777791, 0)
-Tab7.Size = UDim2.new(0.215873018, 0, 0.388888896, 0)
-Tab7.Font = Enum.Font.Arial
-Tab7.TextColor3 = Color3.fromRGB(255, 255, 255)
-Tab7.TextSize = 14.000
-
-Tab8.Name = "Tab8"
-Tab8.Parent = Tabs
-Tab8.BackgroundColor3 = Color3.fromRGB(152, 152, 152)
-Tab8.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Tab8.BorderSizePixel = 0
-Tab8.Position = UDim2.new(0.753850281, 0, 0.527777791, 0)
-Tab8.Size = UDim2.new(0.215873018, 0, 0.388888896, 0)
-Tab8.Font = Enum.Font.Arial
-Tab8.TextColor3 = Color3.fromRGB(255, 255, 255)
-Tab8.TextSize = 14.000
-
-TextLabel.Parent = Main
-TextLabel.BackgroundColor3 = Color3.fromRGB(107, 107, 107)
-TextLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
-TextLabel.BorderSizePixel = 0
-TextLabel.Size = UDim2.new(1, 0, 0.0484581478, 0)
-TextLabel.Font = Enum.Font.Arial
-TextLabel.Text = "Exec"
-TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel.TextSize = 14.000
-TextLabel.TextWrapped = true
-
-Scroll.Name = "Scroll"
-Scroll.Parent = Main
-Scroll.Active = true
-Scroll.BackgroundColor3 = Color3.fromRGB(166, 166, 166)
-Scroll.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Scroll.BorderSizePixel = 0
-Scroll.Position = UDim2.new(0.0285714287, 0, 0.235862702, 0)
-Scroll.Size = UDim2.new(0.942857146, 0, 0.581497788, 0)
-Scroll.CanvasSize = UDim2.new(0, 0, 5, 0)
-Scroll.ScrollBarThickness = 3
-
-Codebox.Name = "Codebox"
-Codebox.Parent = Scroll
-Codebox.BackgroundColor3 = Color3.fromRGB(89, 89, 89)
-Codebox.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Codebox.BorderSizePixel = 0
-Codebox.Size = UDim2.new(1, 0, 1, 0)
-Codebox.ClearTextOnFocus = false
-Codebox.Font = Enum.Font.Arial
-Codebox.PlaceholderColor3 = Color3.fromRGB(223, 223, 223)
-Codebox.PlaceholderText = "Code here"
-Codebox.Text = ""
-Codebox.TextColor3 = Color3.fromRGB(255, 255, 255)
-Codebox.TextSize = 14.000
-Codebox.TextWrapped = true
-Codebox.TextXAlignment = Enum.TextXAlignment.Left
-Codebox.TextYAlignment = Enum.TextYAlignment.Top
-
-Run.Name = "Run"
-Run.Parent = Main
-Run.BackgroundColor3 = Color3.fromRGB(89, 89, 89)
-Run.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Run.BorderSizePixel = 0
-Run.Position = UDim2.new(0.0285714287, 0, 0.845815003, 0)
-Run.Size = UDim2.new(0.292063504, 0, 0.127753302, 0)
-Run.Font = Enum.Font.Arial
-Run.Text = "Run! [F5]"
-Run.TextColor3 = Color3.fromRGB(255, 255, 255)
-Run.TextScaled = true
-Run.TextSize = 14.000
-Run.TextWrapped = true
-
-Clear.Name = "Clear"
-Clear.Parent = Main
-Clear.BackgroundColor3 = Color3.fromRGB(89, 89, 89)
-Clear.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Clear.BorderSizePixel = 0
-Clear.Position = UDim2.new(0.353239208, 0, 0.845815003, 0)
-Clear.Size = UDim2.new(0.292063504, 0, 0.127753302, 0)
-Clear.Font = Enum.Font.Arial
-Clear.Text = "Clear"
-Clear.TextColor3 = Color3.fromRGB(255, 255, 255)
-Clear.TextScaled = true
-Clear.TextSize = 14.000
-Clear.TextWrapped = true
-
-LoadFromFile.Name = "LoadFromFile"
-LoadFromFile.Parent = Main
-LoadFromFile.BackgroundColor3 = Color3.fromRGB(89, 89, 89)
-LoadFromFile.BorderColor3 = Color3.fromRGB(0, 0, 0)
-LoadFromFile.BorderSizePixel = 0
-LoadFromFile.Position = UDim2.new(0.67803973, 0, 0.909691632, 0)
-LoadFromFile.Size = UDim2.new(0.292063504, 0, 0.06167401, 0)
-LoadFromFile.Font = Enum.Font.Arial
-LoadFromFile.Text = "Load from file"
-LoadFromFile.TextColor3 = Color3.fromRGB(255, 255, 255)
-LoadFromFile.TextScaled = true
-LoadFromFile.TextSize = 14.000
-LoadFromFile.TextWrapped = true
-
-SaveToFile.Name = "SaveToFile"
-SaveToFile.Parent = Main
-SaveToFile.BackgroundColor3 = Color3.fromRGB(89, 89, 89)
-SaveToFile.BorderColor3 = Color3.fromRGB(0, 0, 0)
-SaveToFile.BorderSizePixel = 0
-SaveToFile.Position = UDim2.new(0.67803973, 0, 0.845815003, 0)
-SaveToFile.Size = UDim2.new(0.292063504, 0, 0.06167401, 0)
-SaveToFile.Font = Enum.Font.Arial
-SaveToFile.Text = "Save to file"
-SaveToFile.TextColor3 = Color3.fromRGB(255, 255, 255)
-SaveToFile.TextScaled = true
-SaveToFile.TextSize = 14.000
-SaveToFile.TextWrapped = true
-
-local EnabledColour=Color3.fromRGB(120, 120, 120)
-local Old=Tab1.BackgroundColor3
-local SelectedTab=Tab1
-local Tabss={}
-for i,v in pairs(Tabs:GetChildren()) do
-	if v.ClassName=="TextButton" then
-		Tabss[v.Name]=""
-		v.Text=v.Name
-		v.MouseButton1Click:Connect(function()
-			SelectedTab.BackgroundColor3=Old	
-			SelectedTab=v
-			SelectedTab.BackgroundColor3=EnabledColour
-			Codebox.Text=(Tabss[SelectedTab.Name] or "")
-		end)
+	if game:GetService("CoreGui"):FindFirstChild("Ex") then
+		game:GetService("CoreGui"):FindFirstChild("Ex"):Destroy()
 	end
-end
+	Ex.Name = "Ex"
+	Ex.Parent = game:GetService("CoreGui")
+	Ex.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
-Codebox.FocusLost:Connect(function()
-	Tabss[SelectedTab.Name]=Codebox.Text
-end)
+	Main.Name = "Main"
+	Main.Parent = Ex
+	Main.BackgroundColor3 = Color3.fromRGB(143, 143, 143)
+	Main.BorderColor3 = Color3.fromRGB(0, 0, 0)
+	Main.BorderSizePixel = 0
+	Main.Position = UDim2.new(0.318120807, 0, 0.228412256, 0)
+	Main.Size = UDim2.new(0.351677865, 0, 0.501392782, 0)
 
-local function Save()
-	if writefile then
-		writefile(FileName,game:GetService("HttpService"):JSONEncode(Tabss))
-	end
-	print("Saved")
-end
+	Tabs.Name = "Tabs"
+	Tabs.Parent = Main
+	Tabs.BackgroundColor3 = Color3.fromRGB(89, 89, 89)
+	Tabs.BorderColor3 = Color3.fromRGB(0, 0, 0)
+	Tabs.BorderSizePixel = 0
+	Tabs.Position = UDim2.new(0, 0, 0.0473118573, 0)
+	Tabs.Size = UDim2.new(1, 0, 0.158590302, 0)
 
-SaveToFile.MouseButton1Click:Connect(function()
-	Save()
-	print("Saved to file!")
-end)
-LoadFromFile.MouseButton1Click:Connect(function()
-	if readfile then
-		local Data=readfile(FileName)
-		if Data~=nil then
-			local s=pcall(function()
-				Data=game:GetService("HttpService"):JSONDecode(Data)
-				if Data~=nil then
-					Tabss=Data
-				end
+	Tab1.Name = "Tab1"
+	Tab1.Parent = Tabs
+	Tab1.BackgroundColor3 = Color3.fromRGB(152, 152, 152)
+	Tab1.BorderColor3 = Color3.fromRGB(0, 0, 0)
+	Tab1.BorderSizePixel = 0
+	Tab1.Position = UDim2.new(0.0285714287, 0, 0.138888896, 0)
+	Tab1.Size = UDim2.new(0.215873018, 0, 0.388888896, 0)
+	Tab1.Font = Enum.Font.Arial
+	Tab1.TextColor3 = Color3.fromRGB(255, 255, 255)
+	Tab1.TextSize = 14.000
+
+	Tab2.Name = "Tab2"
+	Tab2.Parent = Tabs
+	Tab2.BackgroundColor3 = Color3.fromRGB(152, 152, 152)
+	Tab2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+	Tab2.BorderSizePixel = 0
+	Tab2.Position = UDim2.new(0.271439999, 0, 0.138888896, 0)
+	Tab2.Size = UDim2.new(0.215873018, 0, 0.388888896, 0)
+	Tab2.Font = Enum.Font.Arial
+	Tab2.TextColor3 = Color3.fromRGB(255, 255, 255)
+	Tab2.TextSize = 14.000
+
+	Tab3.Name = "Tab3"
+	Tab3.Parent = Tabs
+	Tab3.BackgroundColor3 = Color3.fromRGB(152, 152, 152)
+	Tab3.BorderColor3 = Color3.fromRGB(0, 0, 0)
+	Tab3.BorderSizePixel = 0
+	Tab3.Position = UDim2.new(0.514308751, 0, 0.138888896, 0)
+	Tab3.Size = UDim2.new(0.215873018, 0, 0.388888896, 0)
+	Tab3.Font = Enum.Font.Arial
+	Tab3.TextColor3 = Color3.fromRGB(255, 255, 255)
+	Tab3.TextSize = 14.000
+
+	Tab4.Name = "Tab4"
+	Tab4.Parent = Tabs
+	Tab4.BackgroundColor3 = Color3.fromRGB(152, 152, 152)
+	Tab4.BorderColor3 = Color3.fromRGB(0, 0, 0)
+	Tab4.BorderSizePixel = 0
+	Tab4.Position = UDim2.new(0.753850281, 0, 0.138888896, 0)
+	Tab4.Size = UDim2.new(0.215873018, 0, 0.388888896, 0)
+	Tab4.Font = Enum.Font.Arial
+	Tab4.TextColor3 = Color3.fromRGB(255, 255, 255)
+	Tab4.TextSize = 14.000
+
+	Tab5.Name = "Tab5"
+	Tab5.Parent = Tabs
+	Tab5.BackgroundColor3 = Color3.fromRGB(152, 152, 152)
+	Tab5.BorderColor3 = Color3.fromRGB(0, 0, 0)
+	Tab5.BorderSizePixel = 0
+	Tab5.Position = UDim2.new(0.0285714287, 0, 0.527777791, 0)
+	Tab5.Size = UDim2.new(0.215873018, 0, 0.388888896, 0)
+	Tab5.Font = Enum.Font.Arial
+	Tab5.TextColor3 = Color3.fromRGB(255, 255, 255)
+	Tab5.TextSize = 14.000
+
+	Tab6.Name = "Tab6"
+	Tab6.Parent = Tabs
+	Tab6.BackgroundColor3 = Color3.fromRGB(152, 152, 152)
+	Tab6.BorderColor3 = Color3.fromRGB(0, 0, 0)
+	Tab6.BorderSizePixel = 0
+	Tab6.Position = UDim2.new(0.271439999, 0, 0.527777791, 0)
+	Tab6.Size = UDim2.new(0.215873018, 0, 0.388888896, 0)
+	Tab6.Font = Enum.Font.Arial
+	Tab6.TextColor3 = Color3.fromRGB(255, 255, 255)
+	Tab6.TextSize = 14.000
+
+	Tab7.Name = "Tab7"
+	Tab7.Parent = Tabs
+	Tab7.BackgroundColor3 = Color3.fromRGB(152, 152, 152)
+	Tab7.BorderColor3 = Color3.fromRGB(0, 0, 0)
+	Tab7.BorderSizePixel = 0
+	Tab7.Position = UDim2.new(0.514308751, 0, 0.527777791, 0)
+	Tab7.Size = UDim2.new(0.215873018, 0, 0.388888896, 0)
+	Tab7.Font = Enum.Font.Arial
+	Tab7.TextColor3 = Color3.fromRGB(255, 255, 255)
+	Tab7.TextSize = 14.000
+
+	Tab8.Name = "Tab8"
+	Tab8.Parent = Tabs
+	Tab8.BackgroundColor3 = Color3.fromRGB(152, 152, 152)
+	Tab8.BorderColor3 = Color3.fromRGB(0, 0, 0)
+	Tab8.BorderSizePixel = 0
+	Tab8.Position = UDim2.new(0.753850281, 0, 0.527777791, 0)
+	Tab8.Size = UDim2.new(0.215873018, 0, 0.388888896, 0)
+	Tab8.Font = Enum.Font.Arial
+	Tab8.TextColor3 = Color3.fromRGB(255, 255, 255)
+	Tab8.TextSize = 14.000
+
+	TextLabel.Parent = Main
+	TextLabel.BackgroundColor3 = Color3.fromRGB(107, 107, 107)
+	TextLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
+	TextLabel.BorderSizePixel = 0
+	TextLabel.Size = UDim2.new(1, 0, 0.0484581478, 0)
+	TextLabel.Font = Enum.Font.Arial
+	TextLabel.Text = "Exec"
+	TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+	TextLabel.TextSize = 14.000
+	TextLabel.TextWrapped = true
+
+	Scroll.Name = "Scroll"
+	Scroll.Parent = Main
+	Scroll.Active = true
+	Scroll.BackgroundColor3 = Color3.fromRGB(166, 166, 166)
+	Scroll.BorderColor3 = Color3.fromRGB(0, 0, 0)
+	Scroll.BorderSizePixel = 0
+	Scroll.Position = UDim2.new(0.0285714287, 0, 0.235862702, 0)
+	Scroll.Size = UDim2.new(0.942857146, 0, 0.581497788, 0)
+	Scroll.CanvasSize = UDim2.new(0, 0, 5, 0)
+	Scroll.ScrollBarThickness = 3
+
+	Codebox.Name = "Codebox"
+	Codebox.Parent = Scroll
+	Codebox.BackgroundColor3 = Color3.fromRGB(89, 89, 89)
+	Codebox.BorderColor3 = Color3.fromRGB(0, 0, 0)
+	Codebox.BorderSizePixel = 0
+	Codebox.Size = UDim2.new(1, 0, 1, 0)
+	Codebox.ClearTextOnFocus = false
+	Codebox.Font = Enum.Font.Arial
+	Codebox.PlaceholderColor3 = Color3.fromRGB(223, 223, 223)
+	Codebox.PlaceholderText = "Code here"
+	Codebox.Text = ""
+	Codebox.TextColor3 = Color3.fromRGB(255, 255, 255)
+	Codebox.TextSize = 14.000
+	Codebox.TextWrapped = true
+	Codebox.TextXAlignment = Enum.TextXAlignment.Left
+	Codebox.TextYAlignment = Enum.TextYAlignment.Top
+
+	Run.Name = "Run"
+	Run.Parent = Main
+	Run.BackgroundColor3 = Color3.fromRGB(89, 89, 89)
+	Run.BorderColor3 = Color3.fromRGB(0, 0, 0)
+	Run.BorderSizePixel = 0
+	Run.Position = UDim2.new(0.0285714287, 0, 0.845815003, 0)
+	Run.Size = UDim2.new(0.292063504, 0, 0.127753302, 0)
+	Run.Font = Enum.Font.Arial
+	Run.Text = "Run! [F5]"
+	Run.TextColor3 = Color3.fromRGB(255, 255, 255)
+	Run.TextScaled = true
+	Run.TextSize = 14.000
+	Run.TextWrapped = true
+
+	Clear.Name = "Clear"
+	Clear.Parent = Main
+	Clear.BackgroundColor3 = Color3.fromRGB(89, 89, 89)
+	Clear.BorderColor3 = Color3.fromRGB(0, 0, 0)
+	Clear.BorderSizePixel = 0
+	Clear.Position = UDim2.new(0.353239208, 0, 0.845815003, 0)
+	Clear.Size = UDim2.new(0.292063504, 0, 0.127753302, 0)
+	Clear.Font = Enum.Font.Arial
+	Clear.Text = "Clear"
+	Clear.TextColor3 = Color3.fromRGB(255, 255, 255)
+	Clear.TextScaled = true
+	Clear.TextSize = 14.000
+	Clear.TextWrapped = true
+
+	LoadFromFile.Name = "LoadFromFile"
+	LoadFromFile.Parent = Main
+	LoadFromFile.BackgroundColor3 = Color3.fromRGB(89, 89, 89)
+	LoadFromFile.BorderColor3 = Color3.fromRGB(0, 0, 0)
+	LoadFromFile.BorderSizePixel = 0
+	LoadFromFile.Position = UDim2.new(0.67803973, 0, 0.909691632, 0)
+	LoadFromFile.Size = UDim2.new(0.292063504, 0, 0.06167401, 0)
+	LoadFromFile.Font = Enum.Font.Arial
+	LoadFromFile.Text = "Load from file"
+	LoadFromFile.TextColor3 = Color3.fromRGB(255, 255, 255)
+	LoadFromFile.TextScaled = true
+	LoadFromFile.TextSize = 14.000
+	LoadFromFile.TextWrapped = true
+
+	SaveToFile.Name = "SaveToFile"
+	SaveToFile.Parent = Main
+	SaveToFile.BackgroundColor3 = Color3.fromRGB(89, 89, 89)
+	SaveToFile.BorderColor3 = Color3.fromRGB(0, 0, 0)
+	SaveToFile.BorderSizePixel = 0
+	SaveToFile.Position = UDim2.new(0.67803973, 0, 0.845815003, 0)
+	SaveToFile.Size = UDim2.new(0.292063504, 0, 0.06167401, 0)
+	SaveToFile.Font = Enum.Font.Arial
+	SaveToFile.Text = "Save to file"
+	SaveToFile.TextColor3 = Color3.fromRGB(255, 255, 255)
+	SaveToFile.TextScaled = true
+	SaveToFile.TextSize = 14.000
+	SaveToFile.TextWrapped = true
+
+	local EnabledColour=Color3.fromRGB(120, 120, 120)
+	local Old=Tab1.BackgroundColor3
+	local SelectedTab=Tab1
+	local Tabss={}
+	for i,v in pairs(Tabs:GetChildren()) do
+		if v.ClassName=="TextButton" then
+			Tabss[v.Name]=""
+			v.Text=v.Name
+			v.MouseButton1Click:Connect(function()
+				SelectedTab.BackgroundColor3=Old	
+				SelectedTab=v
+				SelectedTab.BackgroundColor3=EnabledColour
 				Codebox.Text=(Tabss[SelectedTab.Name] or "")
-				Data=nil
-				print("Loaded data from file")
 			end)
-		else
-			print("Failed to load from file! (does not exist)")
 		end
 	end
 
-end)
-Run.MouseButton1Click:Connect(function()
-	local s,r=pcall(function()
-		loadstring(Codebox.Text)()
+	Codebox.FocusLost:Connect(function()
+		Tabss[SelectedTab.Name]=Codebox.Text
 	end)
-	if r then
-		print("#ERR:",r)
-	end
-end)
 
-game:GetService("UserInputService").InputBegan:Connect(function(input)
-	if input.KeyCode==Enum.KeyCode.F8 then
-		if game:GetService("UserInputService"):GetFocusedTextBox()==nil then
-			local s,r=pcall(function()
-				loadstring(Codebox.Text)()
-			end)
-			if r then
-				print("#ERR:",r)
+	local function Save()
+		if writefile then
+			writefile(FileName,game:GetService("HttpService"):JSONEncode(Tabss))
+		end
+		print("Saved")
+	end
+
+	SaveToFile.MouseButton1Click:Connect(function()
+		Save()
+		print("Saved to file!")
+	end)
+	LoadFromFile.MouseButton1Click:Connect(function()
+		if readfile then
+			local Data=readfile(FileName)
+			if Data~=nil then
+				local s=pcall(function()
+					Data=game:GetService("HttpService"):JSONDecode(Data)
+					if Data~=nil then
+						Tabss=Data
+					end
+					Codebox.Text=(Tabss[SelectedTab.Name] or "")
+					Data=nil
+					print("Loaded data from file")
+				end)
+			else
+				print("Failed to load from file! (does not exist)")
 			end
 		end
-	end
-end)
 
-SelectedTab.BackgroundColor3=EnabledColour
+	end)
+	Run.MouseButton1Click:Connect(function()
+		local s,r=pcall(function()
+			loadstring(Codebox.Text)()
+		end)
+		if r then
+			print("#ERR:",r)
+		end
+	end)
 
-
-local UIS = game:GetService("UserInputService")
-local function dragify(Frame)
-	local dragToggle = nil
-	local dragInput = nil
-	local dragStart = nil
-	local dragPos = nil
-	local function updateInput(input)
-		Delta = input.Position - dragStart
-		Position = UDim2.new(startPos.X.Scale, startPos.X.Offset + Delta.X, startPos.Y.Scale, startPos.Y.Offset + Delta.Y)
-		game:GetService("TweenService"):Create(Frame, TweenInfo.new(0.05), {Position = Position}):Play()
-	end
-	Frame.InputBegan:Connect(function(input)
-		if (input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch) and UIS:GetFocusedTextBox() == nil then
-			dragToggle = true
-			dragStart = input.Position
-			startPos = Frame.Position
-			input.Changed:Connect(function()
-				if input.UserInputState == Enum.UserInputState.End then
-					dragToggle = false
+	game:GetService("UserInputService").InputBegan:Connect(function(input)
+		if input.KeyCode==Enum.KeyCode.F8 then
+			if game:GetService("UserInputService"):GetFocusedTextBox()==nil then
+				local s,r=pcall(function()
+					loadstring(Codebox.Text)()
+				end)
+				if r then
+					print("#ERR:",r)
 				end
-			end)
+			end
 		end
 	end)
-	Frame.InputChanged:Connect(function(input)
-		if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
-			dragInput = input
+
+	SelectedTab.BackgroundColor3=EnabledColour
+
+
+	local UIS = game:GetService("UserInputService")
+	local function dragify(Frame)
+		local dragToggle = nil
+		local dragInput = nil
+		local dragStart = nil
+		local dragPos = nil
+		local function updateInput(input)
+			Delta = input.Position - dragStart
+			Position = UDim2.new(startPos.X.Scale, startPos.X.Offset + Delta.X, startPos.Y.Scale, startPos.Y.Offset + Delta.Y)
+			game:GetService("TweenService"):Create(Frame, TweenInfo.new(0.05), {Position = Position}):Play()
 		end
-	end)
-	game:GetService("UserInputService").InputChanged:Connect(function(input)
-		if input == dragInput and dragToggle then
-			updateInput(input)
-		end
-	end)
-end
-dragify(Main)
-
-if game:GetService("TextChatService").ChatVersion==Enum.ChatVersion.TextChatService then
-	print("This chat isnt supported therefore I will not run.")
-	return
-end
-
-print("Hello gamer I am supported with your chatrace!")
-
-local ChatToggle = Instance.new("ScreenGui")
-local Main = Instance.new("Frame")
-local Toggle = Instance.new("TextButton")
-local TextLabel = Instance.new("TextLabel")
-
---Properties:
-
-ChatToggle.Name = "ChatToggle"
-s=pcall(function()
-	ChatToggle.Parent = game:GetService("CoreGui")
-end)
-if not s then
-	ChatToggle.Parent = game.Players.LocalPlayer.PlayerGui
-end
-ChatToggle.ResetOnSpawn=false
-ChatToggle.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
-
-Main.Name = "Main"
-Main.Parent = ChatToggle
-Main.BackgroundColor3 = Color3.fromRGB(147, 147, 147)
-Main.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Main.BorderSizePixel = 0
-Main.Position = UDim2.new(0.347280324, 0, 0.400000006, 0)
-Main.Size = UDim2.new(0.177126914, 7, 0.188405797, 7)
-
-TextLabel.Parent = Main
-TextLabel.BackgroundColor3 = Color3.fromRGB(221, 221, 221)
-TextLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
-TextLabel.BorderSizePixel = 0
-TextLabel.Size = UDim2.new(1, 0, 0.307692319, 0)
-TextLabel.Font = Enum.Font.SourceSans
-TextLabel.Text = "Toggle Chatted / fixer included"
-TextLabel.TextColor3 = Color3.fromRGB(0, 0, 0)
-TextLabel.TextScaled = true
-TextLabel.TextSize = 14.000
-TextLabel.TextWrapped = true
-
-Toggle.Name = "Toggle"
-Toggle.Parent = Main
-Toggle.BackgroundColor3 = Color3.fromRGB(189, 189, 189)
-Toggle.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Toggle.BorderSizePixel = 0
-Toggle.Position = UDim2.new(0.0649999976, 0, 0.400000006, 0)
-Toggle.Size = UDim2.new(0.874015749, 0, 0.523076952, 0)
-Toggle.Font = Enum.Font.SourceSans
-Toggle.Text = "YoucanDragMe!"
-Toggle.TextColor3 = Color3.fromRGB(0, 0, 0)
-Toggle.TextScaled = true
-Toggle.TextSize = 14.000
-Toggle.TextWrapped = true
-
-dragify(Main)
-
-local ChattedEnabled=false
-
-local ChatRemote=Instance.new("BindableEvent")
-
-local GG=nil
-local FFA=nil
-
-while true do
-	print("Waiting on chat connection.")
-	local s=pcall(function()
-		game:GetService("StarterGui"):SetCore("CoreGuiChatConnections", {ChatWindow = {MessagePosted = ChatRemote}})
-	end)
-	if s then break end
-	task.wait(0.2)
-end
-print("I got the chat connection!")
-
-if ChattedEnabled then
-	Toggle.Text=".Chatted [Enabled]"
-	Toggle.BackgroundColor3=Color3.new(0.43, 0.69, 0.47)
-
-else
-	Toggle.Text=".Chatted [Disabled]"
-	Toggle.BackgroundColor3=Color3.new(0.9, 0.56, 0.61)
-end
-
-
-
-local last=""
-local function SendChatted(msg)
-if msg==last then return end -- Anti spam
-last=msg
-print("Fired")
-ChatRemote:Fire(msg)
-
-spawn(function()
-task.wait(3)
-if last==msg then
-last=""
-end
-
-end)
-end
-
-UIS.InputBegan:Connect(function(input)
-	if input.KeyCode==Enum.KeyCode.Slash then
-		if UIS:GetFocusedTextBox()==nil then
-			pcall(function()
-				if FFA then
-					if GG.Parent==nil then
-						FFA:Disconnect()
-						GG=nil
+		Frame.InputBegan:Connect(function(input)
+			if (input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch) and UIS:GetFocusedTextBox() == nil then
+				dragToggle = true
+				dragStart = input.Position
+				startPos = Frame.Position
+				input.Changed:Connect(function()
+					if input.UserInputState == Enum.UserInputState.End then
+						dragToggle = false
 					end
-				end
-				GG=game:GetService("Players").LocalPlayer.PlayerGui.Chat.Frame.ChatBarParentFrame.Frame.BoxFrame.Frame.ChatBar
-				if FFA==nil then
-					FFA=GG.FocusLost:Connect(function(ent)
-						if ent then
-							if ChattedEnabled then
-								if GG.Text~="" then
-									SendChatted(GG.Text)
-								end
-							end
-							if GG.Text~="" then
-								if GG.Text:sub(0,3) == "/c " or GG.Text:sub(0,3) == "/e " then
-									if not ChattedEnabled then
-										SendChatted(GG.Text)
-									end
-								else
-									game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(GG.Text,"All")
-								end
-							end
-							GG.Text=""
-						end
-					end)
-				end
-				GG:CaptureFocus()
-				task.wait()
-				if GG.Text=="/" then
-					GG.Text=""
-				end
-			end)
-		end
+				end)
+			end
+		end)
+		Frame.InputChanged:Connect(function(input)
+			if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
+				dragInput = input
+			end
+		end)
+		game:GetService("UserInputService").InputChanged:Connect(function(input)
+			if input == dragInput and dragToggle then
+				updateInput(input)
+			end
+		end)
 	end
-end)
+	dragify(Main)
 
-Toggle.MouseButton1Click:Connect(function()
-	ChattedEnabled=not ChattedEnabled
+	if game:GetService("TextChatService").ChatVersion==Enum.ChatVersion.TextChatService then
+		print("This chat isnt supported therefore I will not run.")
+		return
+	end
+
+	print("Hello gamer I am supported with your chatrace!")
+
+	local ChatToggle = Instance.new("ScreenGui")
+	local Main = Instance.new("Frame")
+	local Toggle = Instance.new("TextButton")
+	local TextLabel = Instance.new("TextLabel")
+
+	--Properties:
+
+	ChatToggle.Name = "ChatToggle"
+	s=pcall(function()
+		ChatToggle.Parent = game:GetService("CoreGui")
+	end)
+	if not s then
+		ChatToggle.Parent = game.Players.LocalPlayer.PlayerGui
+	end
+	ChatToggle.ResetOnSpawn=false
+	ChatToggle.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+	Main.Name = "Main"
+	Main.Parent = ChatToggle
+	Main.BackgroundColor3 = Color3.fromRGB(147, 147, 147)
+	Main.BorderColor3 = Color3.fromRGB(0, 0, 0)
+	Main.BorderSizePixel = 0
+	Main.Position = UDim2.new(0.347280324, 0, 0.400000006, 0)
+	Main.Size = UDim2.new(0.177126914, 7, 0.188405797, 7)
+
+	TextLabel.Parent = Main
+	TextLabel.BackgroundColor3 = Color3.fromRGB(221, 221, 221)
+	TextLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
+	TextLabel.BorderSizePixel = 0
+	TextLabel.Size = UDim2.new(1, 0, 0.307692319, 0)
+	TextLabel.Font = Enum.Font.SourceSans
+	TextLabel.Text = "Toggle Chatted / fixer included"
+	TextLabel.TextColor3 = Color3.fromRGB(0, 0, 0)
+	TextLabel.TextScaled = true
+	TextLabel.TextSize = 14.000
+	TextLabel.TextWrapped = true
+
+	Toggle.Name = "Toggle"
+	Toggle.Parent = Main
+	Toggle.BackgroundColor3 = Color3.fromRGB(189, 189, 189)
+	Toggle.BorderColor3 = Color3.fromRGB(0, 0, 0)
+	Toggle.BorderSizePixel = 0
+	Toggle.Position = UDim2.new(0.0649999976, 0, 0.400000006, 0)
+	Toggle.Size = UDim2.new(0.874015749, 0, 0.523076952, 0)
+	Toggle.Font = Enum.Font.SourceSans
+	Toggle.Text = "YoucanDragMe!"
+	Toggle.TextColor3 = Color3.fromRGB(0, 0, 0)
+	Toggle.TextScaled = true
+	Toggle.TextSize = 14.000
+	Toggle.TextWrapped = true
+
+	dragify(Main)
+
+	local ChattedEnabled=false
+
+	local ChatRemote=Instance.new("BindableEvent")
+
+	local GG=nil
+	local FFA=nil
+
+	while true do
+		print("Waiting on chat connection.")
+		local s=pcall(function()
+			game:GetService("StarterGui"):SetCore("CoreGuiChatConnections", {ChatWindow = {MessagePosted = ChatRemote}})
+		end)
+		if s then break end
+		task.wait(0.2)
+	end
+	print("I got the chat connection!")
+
 	if ChattedEnabled then
 		Toggle.Text=".Chatted [Enabled]"
 		Toggle.BackgroundColor3=Color3.new(0.43, 0.69, 0.47)
-		
+
 	else
 		Toggle.Text=".Chatted [Disabled]"
 		Toggle.BackgroundColor3=Color3.new(0.9, 0.56, 0.61)
 	end
-end)
 
-pcall(function()
-	if FFA then
-		if GG.Parent==nil then
-			FFA:Disconnect()
-			GG=nil
-		end
+
+
+	local last=""
+	local function SendChatted(msg)
+		if msg==last then return end -- Anti spam
+		last=msg
+		print("Fired")
+		ChatRemote:Fire(msg)
+
+		spawn(function()
+			task.wait(3)
+			if last==msg then
+				last=""
+			end
+
+		end)
 	end
-	GG=game:GetService("Players").LocalPlayer.PlayerGui.Chat.Frame.ChatBarParentFrame.Frame.BoxFrame.Frame.ChatBar
-	if FFA==nil then
-		FFA=GG.FocusLost:Connect(function(ent)
-			if ent then
-				if ChattedEnabled then
-					if GG.Text~="" then
-					SendChatted(GG.Text)
+
+	UIS.InputBegan:Connect(function(input)
+		if input.KeyCode==Enum.KeyCode.Slash then
+			if UIS:GetFocusedTextBox()==nil then
+				pcall(function()
+					if FFA then
+						if GG.Parent==nil then
+							FFA:Disconnect()
+							GG=nil
+						end
 					end
-				end
-				if GG.Text~="" then
-					if GG.Text:sub(0,3) == "/c " or GG.Text:sub(0,3) == "/e " then
-						if not ChattedEnabled then
+					GG=game:GetService("Players").LocalPlayer.PlayerGui.Chat.Frame.ChatBarParentFrame.Frame.BoxFrame.Frame.ChatBar
+					if FFA==nil then
+						FFA=GG.FocusLost:Connect(function(ent)
+							if ent then
+								if ChattedEnabled then
+									if GG.Text~="" then
+										SendChatted(GG.Text)
+									end
+								end
+								if GG.Text~="" then
+									if GG.Text:sub(0,3) == "/c " or GG.Text:sub(0,3) == "/e " then
+										if not ChattedEnabled then
+											SendChatted(GG.Text)
+										end
+									else
+										game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(GG.Text,"All")
+									end
+								end
+								GG.Text=""
+							end
+						end)
+					end
+					GG:CaptureFocus()
+					task.wait()
+					if GG.Text=="/" then
+						GG.Text=""
+					end
+				end)
+			end
+		end
+	end)
+
+	Toggle.MouseButton1Click:Connect(function()
+		ChattedEnabled=not ChattedEnabled
+		if ChattedEnabled then
+			Toggle.Text=".Chatted [Enabled]"
+			Toggle.BackgroundColor3=Color3.new(0.43, 0.69, 0.47)
+
+		else
+			Toggle.Text=".Chatted [Disabled]"
+			Toggle.BackgroundColor3=Color3.new(0.9, 0.56, 0.61)
+		end
+	end)
+
+	pcall(function()
+		if FFA then
+			if GG.Parent==nil then
+				FFA:Disconnect()
+				GG=nil
+			end
+		end
+		GG=game:GetService("Players").LocalPlayer.PlayerGui.Chat.Frame.ChatBarParentFrame.Frame.BoxFrame.Frame.ChatBar
+		if FFA==nil then
+			FFA=GG.FocusLost:Connect(function(ent)
+				if ent then
+					if ChattedEnabled then
+						if GG.Text~="" then
 							SendChatted(GG.Text)
 						end
-					else
-						game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(GG.Text,"All")
 					end
+					if GG.Text~="" then
+						if GG.Text:sub(0,3) == "/c " or GG.Text:sub(0,3) == "/e " then
+							if not ChattedEnabled then
+								SendChatted(GG.Text)
+							end
+						else
+							game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(GG.Text,"All")
+						end
+					end
+					GG.Text=""
 				end
-				GG.Text=""
-			end
-		end)
-	end
+			end)
+		end
+	end)
+
+	local SGUI=game:GetService("StarterGui")
+	game:GetService("RunService").Stepped:Connect(function()
+		if SGUI:GetCore("ChatActive")==true then
+			pcall(function()
+				game:GetService("StarterGui"):SetCore("CoreGuiChatConnections", {ChatWindow = {MessagePosted = ChatRemote}})
+			end)
+			pcall(function()
+				game:GetService("Players").LocalPlayer.PlayerGui.Chat.Frame.Visible=true
+			end)
+		else
+			pcall(function()
+				game:GetService("Players").LocalPlayer.PlayerGui.Chat.Frame.Visible=false
+			end)
+		end
+	end)
+
+
+	print("255 am here")
 end)
-
-local SGUI=game:GetService("StarterGui")
-game:GetService("RunService").Stepped:Connect(function()
-	if SGUI:GetCore("ChatActive")==true then
-		pcall(function()
-			game:GetService("StarterGui"):SetCore("CoreGuiChatConnections", {ChatWindow = {MessagePosted = ChatRemote}})
-		end)
-		pcall(function()
-			game:GetService("Players").LocalPlayer.PlayerGui.Chat.Frame.Visible=true
-		end)
-	else
-		pcall(function()
-			game:GetService("Players").LocalPlayer.PlayerGui.Chat.Frame.Visible=false
-		end)
-	end
-end)
-
-
-print("255 am here")
