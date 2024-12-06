@@ -13968,7 +13968,7 @@ task.spawn(function()
 	print("Hello gamer I am supported with your chatrace!")
 	
 	local ChatToggle = Instance.new("ScreenGui")
-	local Main = Instance.new("Frame")
+	local Main1 = Instance.new("Frame")
 	local Toggle = Instance.new("TextButton")
 	local TextLabel = Instance.new("TextLabel")
 	
