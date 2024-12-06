@@ -13960,7 +13960,7 @@ local function dragify(Frame)
 end
 dragify(Main)
 
-	if game:GetService("TextChatService").ChatVersion==Enum.ChatVersion.TextChatService then
+if game:GetService("TextChatService").ChatVersion==Enum.ChatVersion.TextChatService then
 	print("This chat isnt supported therefore I will not run.")
 	return
 end
@@ -14018,11 +14018,6 @@ Toggle.TextScaled = true
 Toggle.TextSize = 14.000
 Toggle.TextWrapped = true
 
-
-
-
-local UIS = game:GetService("UserInputService")
-
 dragify(Main)
 
 local ChattedEnabled=false
@@ -14053,9 +14048,20 @@ end
 
 
 
+local last=""
 local function SendChatted(msg)
+if msg==last then return end -- Anti spam
+last=msg
+print("Fired")
 ChatRemote:Fire(msg)
 
+spawn(function()
+task.wait(3)
+if last==msg then
+last=""
+end
+
+end)
 end
 
 UIS.InputBegan:Connect(function(input)
@@ -14158,4 +14164,6 @@ game:GetService("RunService").Stepped:Connect(function()
 		end)
 	end
 end)
+
+
 print("255 am here")
